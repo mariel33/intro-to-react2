@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <title>More React Practice</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+    <script type="text/babel">
+      class Welcome extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            day: 'Monday'
+          }
+        }
+        render() {
+          return (
+            <div>
+              <h1>Hello, {this.props.name}.</h1>
+              <h3>Today is: {this.state.day}</h3>
+            </div>
+            );
+          }
+        }
+        const element = <Welcome name = "Mariel"/>;
+        ReactDOM.render(
+          element, document.getElementById('root')
+        );
+    </script>
+  </body>
+</html>
